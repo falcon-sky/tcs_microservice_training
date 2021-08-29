@@ -1,0 +1,11 @@
+/.idea/
+*.iml
+/target/
+/out/
+/lib
+/build/
+/bin
+.classpath
+.project
+.settings
+*.versionsBackup
