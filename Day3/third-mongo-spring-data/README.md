@@ -7,15 +7,30 @@ docker-compose -f docker-compose-mongo.yml up -d
 mvn spring-boot:run
 
 # training
-Post:http://localhost:8080/customer/create?name=shanker&custId=12&address=bangalore
-Get Read all:http://localhost:8080/customer/read
-Delete by name:http://localhost:8080/customer/delete?name=shanker
+## Post
 
-{
-  "name": "Rama",
-  "custId": "1re206",
-  "address": "Bangalore"
-}
+curl -X POST \
+http://localhost:8080/customer/create \
+-H 'content-type: application/json' \
+-d '{
+"name": "Rama",
+"custId": "1re206",
+"address": "Bangalore"
+}'
+
+## Get 
+
+curl -X GET \
+http://localhost:8080/customer/read \
+
+## Put
+
+curl -X PUT 'http://localhost:8080/customer/update?custId=1re07&name=Rama' 
+
+##Delete
+
+curl -X DELETE 'http://localhost:8080/customer/delete?name=Rama' 
+
 
 #Show data::
 
