@@ -34,9 +34,13 @@ curl -X DELETE 'http://localhost:8080/customer/delete?name=Rama'
 
 #Show data::
 
-docker exec -it day3_mongo_1 bash
+docker exec -it third-mongo-spring-data_mongo_1 bash
+
 mongo
+
 show dbs
+
 show tables
+
 db.customer.find()
 
