@@ -1,0 +1,34 @@
+1) Create a springboot project which store the message data in to mongo db
+Input:
+Auto message communication :
+Message: to,from,content,corelationid(uuid)
+
+Output:
+
+Operation:
+Get
+Post
+Put
+Delete
+
+Run and test through curl and postman
+
+2)Create Springboot microservice with mysql
+
+Create a springboot project which store the message data in to mysql db
+Input:
+Auto message communication :
+
+Message: to,from,content,corelationid(uuid)
+
+Operation:
+Get
+Post
+Put
+Delete
+
+Run and test through curl and postman
+
+
+Create the docker image for bothe application and test with database.
+
