@@ -9,19 +9,11 @@ mvn spring-boot:run
 # training
 ## Post
 
-curl -X POST \
-http://localhost:8080/customer/create \
--H 'content-type: application/json' \
--d '{
-"name": "Rama",
-"custId": "1re206",
-"address": "Bangalore"
-}'
+curl -X POST http://localhost:8080/customer/create -H 'content-type: application/json' -d '{"name": "Rama","custId": "1re206","address": "Bangalore"}'
 
 ## Get 
 
-curl -X GET \
-http://localhost:8080/customer/read \
+curl -X GET http://localhost:8080/customer/read 
 
 ## Put
 
