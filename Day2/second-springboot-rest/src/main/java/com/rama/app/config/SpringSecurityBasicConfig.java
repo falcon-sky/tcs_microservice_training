@@ -11,11 +11,11 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class SpringSecurityBasicConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(HttpSecurity http) throws Exception {
-    http.httpBasic().and().authorizeRequests().antMatchers("/**").permitAll();
-     /* .antMatchers(HttpMethod.POST, "/post").hasAnyRole("ADMIN")
+    http.httpBasic().and().authorizeRequests().antMatchers("/**").permitAll()
+     .antMatchers(HttpMethod.POST, "/post").hasAnyRole("ADMIN")
       .antMatchers(HttpMethod.PUT, "/put").hasAnyRole("ADMIN","USER")
       .antMatchers(HttpMethod.GET, "/get").hasAnyRole("USER").and().csrf().disable().headers()
-      .frameOptions().disable();*/
+      .frameOptions().disable();
   }
 
   @Autowired
