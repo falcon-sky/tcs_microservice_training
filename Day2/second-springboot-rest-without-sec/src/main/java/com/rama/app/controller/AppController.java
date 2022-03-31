@@ -38,8 +38,9 @@ public class AppController {
     }
 
     @GetMapping("/request")
-    public String getRequestparam(@RequestParam(name = "name", required = true, defaultValue = "rama") String name) {
-        return "Request Param:" + name;
+    public String getRequestparam(@RequestParam(name = "name", required = true, defaultValue = "rama") String name,
+                                  @RequestParam(name = "role", required = true, defaultValue = "developer") String role) {
+        return "Request Param:" + name+":"+role;
     }
 
     @GetMapping("/request/params")
