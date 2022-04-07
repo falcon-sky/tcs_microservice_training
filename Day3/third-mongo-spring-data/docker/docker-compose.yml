@@ -3,15 +3,26 @@ services:
   mongo:
     image: mongo:3.4.7
     ports:
-      - "27017:27017"
-#  app:
-#    image: falcon007/mongo-spring-data:latest
-#    links:
-#      - mongo
-#    environment:
-#      spring.data.mongodb.uri: mongodb://mongo:27017/data
-#    ports:
-#      - "8083:8083"
+      - "27018:27017"
+  mysql-db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'user'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: 'password'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '3306:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '3306'
+      # Where our data will be persisted
+    volumes:
+      - my-db:/var/lib/mysql
 volumes:
-  installation:
-     external: false
+  my-db:
