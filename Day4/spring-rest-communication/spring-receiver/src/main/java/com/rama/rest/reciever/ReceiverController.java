@@ -10,8 +10,9 @@ public class ReceiverController {
   private static final Logger LOGGER = LoggerFactory.getLogger(ReceiverController.class);
 
   @GetMapping("/receiver/get")
-  public String getDetail() {
+  public String getDetail() throws InterruptedException {
     LOGGER.info("Receiver request:");
+    Thread.sleep(2000);
     return "Data from receiver";
   }
 }
