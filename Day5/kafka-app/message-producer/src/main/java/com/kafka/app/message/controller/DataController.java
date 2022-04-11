@@ -17,8 +17,8 @@ public class DataController {
         this.producer = producer;
     }
 
-    @PostMapping(value = "/data")
-    public void sendMessage(@RequestBody String message) {
+    @GetMapping(value = "/data")
+    public void sendMessage(@RequestParam String message) {
         logger.info("send message to kafka topic");
         this.producer.send( message);
     }

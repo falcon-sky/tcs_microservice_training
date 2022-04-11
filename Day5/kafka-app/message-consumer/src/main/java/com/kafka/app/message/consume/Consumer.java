@@ -20,8 +20,8 @@ public class Consumer {
     public void consumeFromFirst(ConsumerRecord<?, ?> consumerRecord) {
         LocalDate localDate = LocalDate.now();
 
-        System.out.println("Time in milliseconds using Date class: " + localDate);
-        PayloadData data= (PayloadData)consumerRecord.value();
+        System.out.println("Time in mislliseconds using Date class: " + localDate);
+        String data= (String)consumerRecord.value();
         logger.info("Receiver on topic: "+ consumerRecord.value().toString());
     }
     
