@@ -26,8 +26,8 @@ public class Producer {
         logger.info("Message: "+key+" sent to topic: "+destinationTopic);
         LocalDate localDate=LocalDate.now();
         System.out.println("Time in milliseconds using Date class: " + localDate);
-       // PayloadData payload= new PayloadData(key,localDate);
-        kafkaTemplate.send(destinationTopic,key, key);
+        PayloadData payload= new PayloadData(key,localDate);
+        kafkaTemplate.send(destinationTopic,key, payload);
     }
 
 }

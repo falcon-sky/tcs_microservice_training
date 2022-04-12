@@ -21,16 +21,16 @@ public class Consumer {
     private final Logger logger = LoggerFactory.getLogger(Consumer.class);
 
     @KafkaListener(topics ="${spring.kafka.topic.first}",containerFactory = "kafkaListenerContainerFactory")
-    public void consumeFromFirst(/*ConsumerRecord<?, ?> consumerRecord*/PayloadData data, Acknowledgment acknowledgment, @Header(KafkaHeaders.RECEIVED_MESSAGE_KEY) Integer key) throws InterruptedException, ExecutionException {
+    public void consumeFromFirst(/*ConsumerRecord<?, ?> consumerRecord*/PayloadData data, Acknowledgment acknowledgment, @Header(KafkaHeaders.RECEIVED_MESSAGE_KEY) String key) throws InterruptedException, ExecutionException {
         logger.info("Receiver on topic: "+ data.toString());
         logger.info("Receiver on partition key: "+ key);
-        ExecutorService executorService = Executors.newFixedThreadPool(1);
+        /*ExecutorService executorService = Executors.newFixedThreadPool(1);
         CompletableFuture<String> future=calculateAsync(acknowledgment,data.getKey(),executorService);
-       // String result= future.get();
-       // logger.info("Result:."+result);
+        String result= future.get();
+        logger.info("Result:."+result);*/
     }
 
-    private CompletableFuture<String> calculateAsync(Acknowledgment acknowledgment,String key, ExecutorService executorService) {
+   /* private CompletableFuture<String> calculateAsync(Acknowledgment acknowledgment,String key, ExecutorService executorService) {
 
         return CompletableFuture.supplyAsync( () -> {
             try {
@@ -45,5 +45,5 @@ public class Consumer {
             }
             return key;
         }, executorService);
-    }
+    }*/
 }
