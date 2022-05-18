@@ -1,6 +1,12 @@
 # Project
 This Apllication is use understand the basic security mechanism in sprict boot application.
 
+##
+Create Project
+
+```bash
+$mvn archetype:generate -DgroupId=com.rama.data -DartifactId=spring-project -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+```
 ## Import project
 Import the project on either eclipse or inellij as a maven import project
 
@@ -52,9 +58,8 @@ $ mvn spring-boot:run
 
 ### Running the application in docker container
 
-
 ```bash
-$ docker 
+$ docker run falcon007/spring-boot-app:0.0.1 -p 8080:8080 
 $ docker-compose  pull
 $ docker-compose  up
 ```
