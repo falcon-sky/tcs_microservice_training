@@ -1,0 +1,107 @@
+Day 1 :
+Introduction To microservice---done
+Java essential for micro service---done
+Build tools maven---done
+Docker basic introduction---not
+Tools for code – Intellij---not
+
+Day 2 : done
+
+Environment Setup
+Java Installation
+Maven Installation
+Intellij Setup
+Docker Installation
+Postman Setup
+Git setup
+Cygwin setup
+Hand-on lab on tools.
+
+Day 3 :
+
+Micro Services Architecture----done
+12 Factor Apps
+Microservice design pattern and its implementation
+SpringBoot introduction
+Service Distribution • Security
+Create Simple spring boot Application---done
+
+Day 4:
+
+Create Rest Api Springboot and its usage
+Microservice Containerization
+Benefit and usage of Containerization
+Micro service in cloud world
+Lab on Docker containerization.
+
+Day 5 :
+ Spring Boot : Annotation
+ Dependency Injection
+• Lab With Spring boot annotation and DI
+
+Day  6:
+ Spring Boot : properties
+ Spring boot environment variable
+ Deep dive to spring.io
+ DI with Spring Boot
+• Lab With Spring boot annotation and environment
+
+Day 7 :
+REST API:
+• Spring Boot REST Controller
+ • GET API • POST/PUT API
+Lab on GET POST and PUT
+
+Day 8:
+REST API:
+ • DELETE API • Path Parameters
+ • Header Parameters
+ • Query Parameters
+Lab to create Full controller Rest Api Microservice
+
+Day 9 :
+SQL Data Base With SpringBoot :
+• SQL database (Mysql)
+• Spring Data Library  Crud repository
+• MongoDB • Database Configuration
+ • Lab With Spring boot and Database SQL
+
+Day 10 :
+NOSql Data Base With SpringBoot :
+
+• Nosql database
+• Spring Data Library  Mongo repository
+• MongoDB • Database Configuration
+ • Lab With Spring boot Nosql
+
+Day 11
+ • Design patterns :
+Service discovery,
+ Load balancer,
+Circuit breaker,
+API Gateway
+Eureka service Discovery load balancing
+• Lab with Service discovery
+
+Day 12: Micro service Inter Communication
+• Inter communication between micro service - with security and handshaking mechanism examples
+• Micro service Messaging
+• ActiveMQ Producers
+• ActiveMQ Consumers
+• Lab with message communication activemq
+
+Day 13: Micro service Testing:
+ • Automated unit testing
+• Component test • Integration test
+• Spring Security(using jwt)
+
+Day 14 : Docker
+• Introduction to Docker
+• Architecture
+• Dockerhub and registry
+• Dockerfile • Docker compose
+• Images and containers
+
+Day 15: Deployment
+ Deployments of microservices over cloud environments (AWS or Azure, any one)
+Day 16: Mini project
