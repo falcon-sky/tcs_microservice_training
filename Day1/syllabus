@@ -3,7 +3,7 @@ Introduction To microservice---done
 Java essential for micro service---done
 Build tools maven---done
 Docker basic introduction---not
-Tools for code – Intellij---not
+Tools for code – Intellij---done
 
 Day 2 : done
 
@@ -20,29 +20,29 @@ Hand-on lab on tools.
 Day 3 :
 
 Micro Services Architecture----done
-12 Factor Apps
-Microservice design pattern and its implementation
-SpringBoot introduction
-Service Distribution
+12 Factor Apps--done
+Microservice design pattern and its implementation--done
+SpringBoot introduction--done
+Service Distribution--done
 Security
 Create Simple spring boot Application---done
 
 Day 4:
 
-Create Rest Api Springboot and its usage
+Create Rest Api Springboot and its usage--done
 Microservice Containerization
 Benefit and usage of Containerization
 Micro service in cloud world
 Lab on Docker containerization.
 
 Day 5 :
- Spring Boot : Annotation
+ Spring Boot : Annotation--
  Dependency Injection
 • Lab With Spring boot annotation and DI
 
 Day  6:
  Spring Boot : properties
- Spring boot environment variable
+ Spring boot environment variable---done
  Deep dive to spring.io
  DI with Spring Boot
 • Lab With Spring boot annotation and environment

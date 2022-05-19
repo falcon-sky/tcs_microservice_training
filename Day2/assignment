@@ -1,0 +1,41 @@
+Assignment project:
+
+Create a spring boot microservice with latest library.
+The project should be created for student data where it have four values.
+
+name
+age
+rollNo
+std
+
+Start the project on port 8083 as dev profile
+
+Create four controller
+
+1) getStudentDetail : /get/student (send query parameter as name and rollno)
+Return received student details
+2) PostStudentDetail: /post/student (send request body as student)
+return student
+3) updateStudentDetail: /put/student(send request body as student and path parameter as name)
+return updated the student with name
+4) deleteStudentDetail /delete/student (sent query parameter as name)
+return student deleted with name
+
+Steps:
+
+Step1: Create the project with maven command
+" mvn archetype:generate -DgroupId=com.name.data -DartifactId=student-project -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false"
+
+step2: update pom file App file and create controller
+
+step3 : Create ReadMe file and explain the steps how to run
+
+step4 : Build (mvn clean install)
+
+step5: Run the application(mvn spring-boot:run)
+
+step6: Test with postman
+
+step7: Test with curl
+
+Step8: update the curl command in readme file.
