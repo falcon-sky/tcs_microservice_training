@@ -8,13 +8,6 @@
   "roll": "1re206"
 }
 
-insert into student
-values(10,'Rama', '1re06');
-
-insert into student
-values(11,'Shanker', '1re07');
-
-
 curl -X POST \
 http://localhost:8080/students/ \
 -H 'cache-control: no-cache' \
