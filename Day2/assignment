@@ -13,13 +13,13 @@ Start the project on port 8083 as dev profile
 Create four controller
 
 1) getStudentDetail : /get/student (send query parameter as name and rollno)
-Return received student details
+Return received student details   ------user
 2) PostStudentDetail: /post/student (send request body as student)
-return student
+return student   -----------------------admin
 3) updateStudentDetail: /put/student(send request body as student and path parameter as name)
-return updated the student with name
+return updated the student with name ----admin
 4) deleteStudentDetail /delete/student (sent query parameter as name)
-return student deleted with name
+return student deleted with name ---------user
 
 Steps:
 
