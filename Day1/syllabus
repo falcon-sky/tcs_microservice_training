@@ -24,7 +24,7 @@ Micro Services Architecture----done
 Microservice design pattern and its implementation--done
 SpringBoot introduction--done
 Service Distribution--done
-Security
+Security--done
 Create Simple spring boot Application---done
 
 Day 4:
@@ -47,7 +47,7 @@ Day  6:
  DI with Spring Boot
 • Lab With Spring boot annotation and environment
 
-Day 7 :
+Day 7 : done
 REST API:
 • Spring Boot REST Controller
  • GET API • POST/PUT API
