@@ -16,9 +16,9 @@ $ mvn spring-boot:run
 ```
 
 ### Test
-curl -X GET http://localhost:8088/get 
-curl -X POST http://localhost:8088/post -d '{"name": "rama", "role": "developer"}' -H 'Content-type:application/json'
-curl -X PUT http://localhost:8088/put/shanker -H 'content-type: application/json' -d '{"name": "Rama", "role": "developer"}'
-curl -X DELETE http://localhost:8088/delete/rama 
+curl -X GET http://localhost:8088/get  --user "user123:password"
+curl -X POST http://localhost:8088/post --user "admin123:password" -d '{"name": "rama", "role": "developer"}' -H 'Content-type:application/json'
+curl -X PUT http://localhost:8088/put/shanker --user "user123:password" -H 'content-type: application/json' -d '{"name": "Rama", "role": "developer"}'
+curl -X DELETE http://localhost:8088/delete/rama  
 curl -X GET http://localhost:8088/path/rama
 curl -X GET 'http://localhost:8088/request?name=test1' 
