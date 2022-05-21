@@ -1,0 +1,12 @@
+employee:
+   get:
+      url: /get
+   
+   post:
+      url: /post
+   
+   put:
+      url: /put/{name}
+   
+   delete:
+      url: /delete/{name}
