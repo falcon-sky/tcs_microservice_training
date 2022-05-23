@@ -1,8 +1,8 @@
-Day 1 :
+Day 1 : done
 Introduction To microservice---done
 Java essential for micro service---done
 Build tools maven---done
-Docker basic introduction---not
+Docker basic introduction---done
 Tools for code – Intellij---done
 
 Day 2 : done
@@ -17,7 +17,7 @@ Git setup
 Cygwin setup
 Hand-on lab on tools.
 
-Day 3 :
+Day 3 : done
 
 Micro Services Architecture----done
 12 Factor Apps--done
@@ -35,16 +35,16 @@ Benefit and usage of Containerization
 Micro service in cloud world
 Lab on Docker containerization.
 
-Day 5 :
- Spring Boot : Annotation--
- Dependency Injection
+Day 5 : done
+ Spring Boot : Annotation-- done
+ Dependency Injection--done
 • Lab With Spring boot annotation and DI
 
-Day  6:
+Day  6: done
  Spring Boot : properties
  Spring boot environment variable---done
- Deep dive to spring.io
- DI with Spring Boot
+ Deep dive to spring.io---done
+ DI with Spring Boot--done
 • Lab With Spring boot annotation and environment
 
 Day 7 : done
@@ -55,16 +55,16 @@ Lab on GET POST and PUT
 
 Day 8:
 REST API:
- • DELETE API • Path Parameters
+ • DELETE API • Path Parameters ---done
  • Header Parameters
- • Query Parameters
+ • Query Parameters----done
 Lab to create Full controller Rest Api Microservice
 
 Day 9 :
 SQL Data Base With SpringBoot :
 • SQL database (Mysql)
 • Spring Data Library  Crud repository
-• MongoDB • Database Configuration
+• SQL • Database Configuration
  • Lab With Spring boot and Database SQL
 
 Day 10 :
