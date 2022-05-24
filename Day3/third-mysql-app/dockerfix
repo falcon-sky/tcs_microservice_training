@@ -1,0 +1,10 @@
+Step 1) Create a file .wslconfig at folder c:\Users\sfjbs\.wslconfig
+
+step 2) update file as below
+[wsl2]
+memory=20GB # Limits VM memory in WSL 2
+processors=4 # Makes the WSL 2 VM use 4 virtual processors
+localhostForwarding=true # Boolean specifying if ports bound to wildcard or localhost in the WSL 2 VM should be connectable from the host via localhost:port.
+
+step 3) open powershell in admin and run the command
+Restart-Service LxssManager
