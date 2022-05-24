@@ -59,7 +59,7 @@ $ mvn spring-boot:run
 ### Running the application in docker container
 
 ```bash
-$ docker run falcon007/spring-boot-app:0.0.1 -p 8080:8080 
+$ docker run -p 8080:8080 falcon007/spring-boot-app:0.0.1 
 $ docker-compose  pull
 $ docker-compose  up
 ```
