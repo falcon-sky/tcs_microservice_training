@@ -1,7 +1,7 @@
 1) Create a springboot project which store the message data in to mongo db
 Input:
 Auto message communication :
-Message: to,from,content,corelationid(uuid)
+Message: to,from,content,corelationid(int)
 
 Output:
 
@@ -19,16 +19,16 @@ Create a springboot project which store the message data in to mysql db
 Input:
 Auto message communication :
 
-Message: to,from,content,corelationid(uuid)
+Message: to,from,content,corelationid(Int)
 
 Operation:
-Get
-Post
-Put
-Delete
+Get: Read
+Post: save
+Put: Update message content
+Delete: delete message from database
 
 Run and test through curl and postman
 
 
-Create the docker image for bothe application and test with database.
+Create the docker image for both application and test with database.
 
