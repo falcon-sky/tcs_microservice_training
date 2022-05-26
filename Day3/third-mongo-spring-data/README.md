@@ -32,6 +32,8 @@ mongo
 
 show dbs
 
+use test_db
+
 show tables
 
 db.customer.find()
