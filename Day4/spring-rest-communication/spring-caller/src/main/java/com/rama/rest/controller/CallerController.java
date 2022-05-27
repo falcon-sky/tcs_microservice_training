@@ -15,7 +15,7 @@ public class CallerController {
   @Autowired
   private RestTemplate restTemplate;
   @Value("${receive.url}")
-  String receiveUrl;
+  String receiveUrl; //http://localhost:10082/receiver/get
 
   @GetMapping("/caller/get")
   public String getDetail() {

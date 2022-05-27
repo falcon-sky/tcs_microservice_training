@@ -12,7 +12,7 @@ public class ReceiverController {
   @GetMapping("/receiver/get")
   public String getDetail() throws InterruptedException {
     LOGGER.info("Receiver request:");
-    Thread.sleep(2000);
+    //Thread.sleep(2000);
     return "Data from receiver";
   }
 }
