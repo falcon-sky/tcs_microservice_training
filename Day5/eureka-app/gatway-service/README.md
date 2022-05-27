@@ -13,5 +13,8 @@ This project is maven project which will be build using maven command.
 $ mvn clean install
 ```
 
-### Gradle
+## Test
 
+```bash
+$ curl --location --request GET 'http://localhost:9091/getSchoolDetails/XYZ'
+```

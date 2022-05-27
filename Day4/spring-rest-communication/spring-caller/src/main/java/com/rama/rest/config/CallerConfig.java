@@ -9,6 +9,7 @@ import java.time.Duration;
 
 @Configuration
 public class CallerConfig {
+
   @Bean
   public RestTemplate restTemplate(RestTemplateBuilder builder) {
 
