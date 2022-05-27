@@ -56,7 +56,7 @@ Lab on GET POST and PUT
 Day 8:
 REST API:
  • DELETE API • Path Parameters ---done
- • Header Parameters
+ • Header Parameters----done
  • Query Parameters----done
 Lab to create Full controller Rest Api Microservice
 
@@ -77,10 +77,10 @@ NOSql Data Base With SpringBoot :
 
 Day 11
  • Design patterns :
-Service discovery,
- Load balancer,
-Circuit breaker,
-API Gateway
+   Service discovery,
+   Load balancer,
+   Circuit breaker,
+   API Gateway
 Eureka service Discovery load balancing
 • Lab with Service discovery
 
@@ -92,7 +92,7 @@ Day 12: Micro service Inter Communication
 • Lab with message communication activemq
 
 Day 13: Micro service Testing:
- • Automated unit testing
+• Automated unit testing
 • Component test • Integration test
 • Spring Security(using jwt)
 
