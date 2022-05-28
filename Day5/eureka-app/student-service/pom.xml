@@ -13,7 +13,7 @@
 	<parent>
 		<groupId>com.eureka.app</groupId>
 		<artifactId>eureka-app</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0.0</version>
 	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
