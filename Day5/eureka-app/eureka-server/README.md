@@ -13,15 +13,9 @@ This project is maven project which will be build using maven command.
 $ mvn clean install
 ```
 
-### Running (Make sure that eureka server is up)
+### Running 
 This project is maven project which will be run using maven command.
 
 ```bash
 $ mvn spring-boot:run
-```
-
-### Test
-
-```bash
-$ curl --location --request GET 'http://localhost:9091/getSchoolDetails/XYZ'
 ```

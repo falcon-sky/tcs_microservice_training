@@ -12,3 +12,10 @@ This project is maven project which will be build using maven command.
 ```bash
 $ mvn clean install
 ```
+
+### Running (Make sure that eureka server is up)
+This project is maven project which will be run using maven command.
+
+```bash
+$ mvn spring-boot:run
+```
