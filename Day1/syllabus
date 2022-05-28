@@ -75,14 +75,14 @@ NOSql Data Base With SpringBoot :
 • MongoDB • Database Configuration
  • Lab With Spring boot Nosql
 
-Day 11
- • Design patterns :
-   Service discovery,
-   Load balancer,
-   Circuit breaker,
-   API Gateway
-Eureka service Discovery load balancing
-• Lab with Service discovery
+Day 11: done
+ • Design patterns : done
+   Service discovery, done
+   Load balancer, done
+   Circuit breaker, done
+   API Gateway. done
+Eureka service Discovery load balancing: done
+• Lab with Service discovery  done
 
 Day 12: Micro service Inter Communication
 • Inter communication between micro service - with security and handshaking mechanism examples
@@ -94,7 +94,7 @@ Day 12: Micro service Inter Communication
 Day 13: Micro service Testing:
 • Automated unit testing
 • Component test • Integration test
-• Spring Security(using jwt)
+• Spring Security (using jwt)
 
 Day 14 : Docker
 • Introduction to Docker
