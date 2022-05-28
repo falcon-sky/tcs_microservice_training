@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.eureka.app</groupId>
 	<artifactId>eureka-server</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>eureka-server</name>
 	<description>Demo project for Spring Boot eureka server</description>
 	<properties>
