@@ -10,6 +10,10 @@ artemis-demo-producer> mvn spring-boot:run
 # Test
 curl -X GET 'http://localhost:1230/send?msg=rama'
 
+## Stop Container
+
+docker-compose -f docker-compose-artemis.yml down
+
 #Show data::
 
 http://localhost:8161/

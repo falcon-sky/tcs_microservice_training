@@ -25,7 +25,7 @@ public class ProducerController {
             producer.send(msg);
             return ResponseEntity.ok()
 
-                                 .body("message sent:");
+                                 .body("message sent:"+msg);
         } catch (Exception e) {
             LOGGER.error("Exception while handling uplink message: ", e);
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
