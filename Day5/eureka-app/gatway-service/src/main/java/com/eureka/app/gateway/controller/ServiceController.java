@@ -19,7 +19,7 @@ public class ServiceController {
 	@RequestMapping(value = "/getSchoolDetails/{schoolname}", method = RequestMethod.GET)
 	public String getStudents(@PathVariable String schoolname) {
 		System.out.println("Getting School details for " + schoolname);
-		String response = restTemplate.exchange("http://student-service/getStudentDetailsForSchool/{schoolname}",
+		String response = restTemplate.exchange("http://school-service/getSchoolDetails/{schoolname}",
 				HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
 				}, schoolname).getBody();
 
