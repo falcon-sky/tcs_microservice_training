@@ -1,10 +1,10 @@
 security:
    basic:
-      enabled: false
+      enabled: true
    ignored: /**
 management:
    security:
-      enabled: false
+      enabled: true
 
 employee:
    get:
@@ -18,3 +18,13 @@ employee:
    
    delete:
       url: /delete/{name}
+
+user:
+   user1:
+      username: user123
+      password: password
+
+admin:
+   user1:
+      username: admin123
+      password: password

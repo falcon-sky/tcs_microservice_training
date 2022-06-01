@@ -9,12 +9,14 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.util.Base64Utils;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
@@ -40,11 +42,23 @@ public class AppControllerTest {
   @Value("${employee.delete.url}")
   String deleteurl;
 
+  @Value("${user.user1.username}")
+  String username1;
+
+  @Value("${user.user1.password}")
+  String password1;
+
+  @Value("${admin.user1.username}")
+  String admin_name1;
+
+  @Value("${user.user1.password}")
+  String admin_password1;
+
 
   @Test
   public void testEmployeeGet() throws Exception {
     ResultActions responseEntity = processApiRequest(geturl, HttpMethod.GET, null,
-      null);
+      null, username1, password1);
     responseEntity.andExpect(status().isOk());
     ObjectMapper mapper = new ObjectMapper();
     String result = responseEntity.andReturn().getResponse().getContentAsString();
@@ -54,7 +68,7 @@ public class AppControllerTest {
   @Test
   public void testEmployeePost() throws Exception {
     Employee employee = createEmployee("test", "dev");
-    ResultActions responseEntity = processApiRequest(posturl, HttpMethod.POST, null, employee);
+    ResultActions responseEntity = processApiRequest(posturl, HttpMethod.POST, null, employee, admin_name1, admin_password1);
     responseEntity.andExpect(status().isOk());
     ObjectMapper mapper = new ObjectMapper();
     Employee result = mapper.readValue(responseEntity.andReturn().getResponse().getContentAsString(),
@@ -67,15 +81,16 @@ public class AppControllerTest {
   }
 
 
-  private ResultActions processApiRequest(String api, HttpMethod methodType, String name, Employee employee) {
+  private ResultActions processApiRequest(String api, HttpMethod methodType, String name, Employee employee, String username, String password) {
     ResultActions response = null;
+    String secret = "Basic " + Base64Utils.encodeToString((username+":"+password).getBytes());
     try {
       switch (methodType) {
         case GET:
-          response = mockMvc.perform(get(api));
+          response = mockMvc.perform(get(api).header(HttpHeaders.AUTHORIZATION, secret));
           break;
         case POST:
-          response = mockMvc.perform(post(api).contentType(MediaType.APPLICATION_JSON)
+          response = mockMvc.perform(post(api).header(HttpHeaders.AUTHORIZATION, secret).contentType(MediaType.APPLICATION_JSON)
             .content(asJsonString(employee)).accept(MediaType.APPLICATION_JSON));
           break;
         case PUT:
