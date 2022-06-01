@@ -42,4 +42,4 @@ delete: delete marks for the student with name.
 
 Two microservice will communicate through rabbitmq.
 
-Micr
+docker-compose for starting mongo and rabbit.
