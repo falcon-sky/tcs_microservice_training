@@ -26,7 +26,7 @@ public class Operation {
     }
 
     public int div(int num1,int num2){
-        int mul=num1*num2;
+        int mul=num1/num2;
         return mul;
     }
 

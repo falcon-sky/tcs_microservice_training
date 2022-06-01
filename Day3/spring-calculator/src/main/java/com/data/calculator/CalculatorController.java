@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@RestController()
 public class CalculatorController {
 
     private final Operation operation;
@@ -26,8 +26,8 @@ public class CalculatorController {
     @GetMapping("/sub")
     public int subtraction(@RequestParam(name = "a", required = true ) int a,
                         @RequestParam(name = "b", required = true ) int b){
-        int add= operation.sub(a,b);
-        return  add;
+        int sub= operation.sub(a,b);
+        return  sub;
     }
 
     @GetMapping("/mul")
