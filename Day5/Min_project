@@ -1,0 +1,45 @@
+## Result search Application
+
+It has two microservice
+
+Microservice1: StudentResult
+
+ Expose get rest endpoint where it will send student name as a request parament.
+
+<url> /get?name=studentname
+
+send method(send student name to microservice2)
+listener(for response)(listen result marks from microservice2)
+
+Microservice2: ResultProcessor: store data in mongo db
+send method (send back to microservice1)
+listener(for response listen student name from microservice 1)
+
+
+It has 3 rest endpoint
+
+post
+put
+delete
+
+Post store result data in database
+Reult data will be:
+Student name
+roll number
+math,science,socialscince,art(marks int)
+
+Put: Update the marks for specific student(student name and marks)
+
+
+Update readme file
+and test with postman.
+write the test cases.
+
+do the all verification.
+
+delete: delete marks for the student with name.
+
+
+Two microservice will communicate through rabbitmq.
+
+Micr
