@@ -43,18 +43,19 @@ public class AppControllerTest {
 
   @Test
   public void testEmployeeGet() throws Exception {
-    ResultActions responseEntity = processApiRequest(geturl, HttpMethod.GET, null,
-      null);
+    String expectedResult="get employee ";
+    ResultActions responseEntity  = mockMvc.perform(get(geturl));
     responseEntity.andExpect(status().isOk());
     ObjectMapper mapper = new ObjectMapper();
-    String result = responseEntity.andReturn().getResponse().getContentAsString();
-    assertEquals("get employee ", result);
+    String actualResult = responseEntity.andReturn().getResponse().getContentAsString();
+    assertEquals(expectedResult, actualResult);
   }
 
   @Test
   public void testEmployeePost() throws Exception {
-    Employee employee = createEmployee("test", "dev");
-    ResultActions responseEntity = processApiRequest(posturl, HttpMethod.POST, null, employee);
+   Employee employee = new Employee("test", "dev");
+    ResultActions responseEntity =mockMvc.perform(post(posturl).contentType(MediaType.APPLICATION_JSON)
+            .content(asJsonString(employee)).accept(MediaType.APPLICATION_JSON));
     responseEntity.andExpect(status().isOk());
     ObjectMapper mapper = new ObjectMapper();
     Employee result = mapper.readValue(responseEntity.andReturn().getResponse().getContentAsString(),
@@ -80,10 +81,10 @@ public class AppControllerTest {
           break;
         case PUT:
           response = mockMvc.perform(put(api, name).contentType(MediaType.APPLICATION_JSON)
-            .content(asJsonString(employee)).accept(MediaType.APPLICATION_JSON));
+            .content(asJsonString(employee)).param("name",name).accept(MediaType.APPLICATION_JSON));
           break;
         case DELETE:
-          response = mockMvc.perform(delete(api, name));
+          response = mockMvc.perform(delete(api, name).param("name",name));
           break;
         default:
           fail("Method Not supported");

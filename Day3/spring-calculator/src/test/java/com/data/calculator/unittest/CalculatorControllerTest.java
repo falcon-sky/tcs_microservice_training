@@ -19,12 +19,21 @@ public class CalculatorControllerTest {
     Operation operation=new Operation(myOperation);
     CalculatorController calculatorController=new CalculatorController(operation);
     @Test
-    public void additionTest(){
+    public void additionSuccessTest(){
        int a=5;
        int b=6;
        int expectedValue=11;
         int actualValue=calculatorController.addition(a,b);
         Assert.assertEquals(expectedValue,actualValue);
+    }
+
+    @Test
+    public void additionFailureTest(){
+        int a=5;
+        int b=6;
+        int expectedValue=12;
+        int actualValue=calculatorController.addition(a,b);
+        Assert.assertNotEquals(expectedValue,actualValue);
     }
 
     @Test
