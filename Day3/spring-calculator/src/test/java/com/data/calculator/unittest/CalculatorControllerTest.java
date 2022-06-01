@@ -1,6 +1,7 @@
 package com.data.calculator.unittest;
 
 import com.data.calculator.CalculatorController;
+import com.data.calculator.MyOperation;
 import com.data.calculator.Operation;
 import org.junit.Assert;
 import org.junit.Test;
@@ -12,22 +13,18 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.mockito.Matchers.anyInt;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+
 public class CalculatorControllerTest {
-
-    @InjectMocks
-    CalculatorController calculatorController;
-
-    @Mock
-    Operation operation;
-
+    MyOperation myOperation=new MyOperation();
+    Operation operation=new Operation(myOperation);
+    CalculatorController calculatorController=new CalculatorController(operation);
     @Test
     public void additionTest(){
-        int expectedResult=9;
-        Mockito.when(operation.add(anyInt(),anyInt())).thenReturn(expectedResult);
-        int actualResult=calculatorController.addition(4,5);
-        Assert.assertEquals(expectedResult,actualResult);
-
+       int a=5;
+       int b=6;
+       int expectedValue=11;
+        int actualValue=calculatorController.addition(a,b);
+        Assert.assertEquals(expectedValue,actualValue);
     }
 
     @Test

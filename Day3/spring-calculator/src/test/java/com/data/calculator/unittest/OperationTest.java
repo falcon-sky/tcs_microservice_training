@@ -4,11 +4,8 @@ package com.data.calculator.unittest;
 import com.data.calculator.MyOperation;
 import com.data.calculator.Operation;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 
-import static org.mockito.Matchers.anyInt;
 
 public class OperationTest {
 
