@@ -46,7 +46,6 @@ public class AppControllerTest {
     String expectedResult="get employee ";
     ResultActions responseEntity  = mockMvc.perform(get(geturl));
     responseEntity.andExpect(status().isOk());
-    ObjectMapper mapper = new ObjectMapper();
     String actualResult = responseEntity.andReturn().getResponse().getContentAsString();
     assertEquals(expectedResult, actualResult);
   }
