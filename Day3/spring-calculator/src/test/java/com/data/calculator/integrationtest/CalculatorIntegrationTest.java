@@ -1,78 +1,77 @@
 package com.data.calculator.integrationtest;
 
-import com.data.calculator.App;
+import com.data.calculator.CalculatorController;
+import com.data.calculator.MyOperation;
+import com.data.calculator.Operation;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-import static org.springframework.http.HttpMethod.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest({App.class})
+@WebMvcTest({CalculatorController.class})
 @ActiveProfiles(value = "test")
 public class CalculatorIntegrationTest {
-    @Autowired
-    private MockMvc mockMvc;
-    @Value("${calculator.add.url}")
-    String addurl;
+  @InjectMocks
+  CalculatorController calculatorController;
+  @MockBean
+  MyOperation myOperation;
+  @MockBean
+  Operation operation;
 
-    @Value("${calculator.sub.url}")
-    String suburl;
+  @Autowired
+  private MockMvc mockMvc;
+  @Value("${calculator.hello.url}")
+  String hellourl;
 
-    @Value("${calculator.mul.url}")
-    String mulurl;
+  @Value("${calculator.add.url}")
+  String addurl;
 
-    @Value("${calculator.div.url}")
-    String divurl;
+  @Value("${calculator.sub.url}")
+  String suburl;
 
-    @Value("${calculator.opr.url}")
-    String oprurl;
+  @Value("${calculator.mul.url}")
+  String mulurl;
 
-    @Test
-    public void testAddGet() throws Exception {
-        String expected= "9";
-        ResultActions responseEntity = processApiRequest(addurl, HttpMethod.GET, "4", "5");
-        responseEntity.andExpect(status().isOk());
+  @Value("${calculator.div.url}")
+  String divurl;
 
-        String result = responseEntity.andReturn().getResponse().getContentAsString();
-        assertEquals(expected, result);
-    }
+  @Value("${calculator.opr.url}")
+  String oprurl;
 
-    private ResultActions processApiRequest(String api, HttpMethod methodType, String num1,String num2) {
-        ResultActions response = null;
-        try {
-            switch (methodType) {
-                case GET:
-                    response = mockMvc.perform(get(api).param("a",num1).param("b",num2));
-                    break;
+  @Test
+  public void testHelloGet() throws Exception {
+    String expected = "hello";
+    ResultActions responseEntity = mockMvc.perform(get(hellourl));
+    responseEntity.andExpect(status().isOk());
 
-                case DELETE:
-                    response = mockMvc.perform(delete(api, null));
-                    break;
-                default:
-                    fail("Method Not supported");
-                    break;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            fail();
-        }
-        return response;
-    }
+    String result = responseEntity.andReturn().getResponse().getContentAsString();
+    assertEquals(expected, result);
+  }
 
-
+  @Test
+  public void testAddGet() throws Exception {
+    int expected = 9;
+    String num1 = "5";
+    String num2 = "4";
+    when(operation.add(anyInt(), anyInt())).thenReturn(expected);
+    ResultActions responseEntity = mockMvc.perform(get(addurl).param("a", num1).param("b", num2));
+    responseEntity.andExpect(status().isOk());
+    String result = responseEntity.andReturn().getResponse().getContentAsString();
+    assertEquals(String.valueOf(expected), result);
+  }
 
 }

@@ -1,4 +1,4 @@
-package com.rama.app;
+package com.rama.app.integrationtets;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
