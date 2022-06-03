@@ -18,6 +18,11 @@ public class RabbitMQConsumer {
     return new Jackson2JsonMessageConverter();
   }
 
+  public void send(Employee company) {
+    rabbitTemplate.convertAndSend(exchange, routingkey, company);
+    System.out.println("Send msg = " + company);
+
+  }
 
   @RabbitListener(queues = "${rabbitmq.queue.name}")
   public void recievedMessage(Employee employee) {

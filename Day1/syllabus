@@ -101,9 +101,9 @@ Day 14 : Docker---done
 • Architecture---done
 • Dockerhub and registry-- done
 • Dockerfile ---done
-• Docker compose
+• Docker compose--done
 • Images and containers---done
 
-Day 15: Deployment:
+Day 15: Deployment: Deploy on virtual machine
  Deployments of microservices over cloud environments (AWS or Azure, any one)
 Day 16: Mini project

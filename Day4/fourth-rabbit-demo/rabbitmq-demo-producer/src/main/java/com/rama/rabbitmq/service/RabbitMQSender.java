@@ -22,4 +22,10 @@ public class RabbitMQSender {
     System.out.println("Send msg = " + company);
 
   }
+
+  @RabbitListener(queues = "${rabbitmq.queue.name}")
+  public void recievedMessage(Employee employee) {
+    System.out.println("Recieved Message From RabbitMQ: " + employee);
+  }
+
 }
