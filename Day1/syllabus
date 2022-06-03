@@ -99,11 +99,11 @@ Day 13: Micro service Testing:--done
 Day 14 : Docker---done
 • Introduction to Docker--done
 • Architecture---done
-• Dockerhub and registry--
+• Dockerhub and registry-- done
 • Dockerfile ---done
 • Docker compose
 • Images and containers---done
 
-Day 15: Deployment
+Day 15: Deployment:
  Deployments of microservices over cloud environments (AWS or Azure, any one)
 Day 16: Mini project
