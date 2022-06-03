@@ -1,0 +1,7 @@
+1) Explain about the overall project
+2) Explain about microservice 1
+3) Explain about microservice 2
+4) Tools and Technology(mvn ,docker , java,springboot,mongodb,rabbitmq)
+5) Architecture and design
+6) Unit test coverage(write unit test for classes and integration test for controller)
+7) Use case of this application
