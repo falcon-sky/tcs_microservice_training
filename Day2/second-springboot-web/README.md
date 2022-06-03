@@ -14,3 +14,25 @@ $ mvn clean install
 $ mvn spring-boot:run
 
 ```
+
+### Create docker image:
+
+```
+docker build -t falcon007/second-springboot-web:1.0.0 .
+
+```
+
+### Push docker images
+
+```bash
+docker login
+$ docker push falcon007/second-springboot-web:1.0.0
+```
+
+
+### Test Command
+
+```bash
+docker login
+$ docker push falcon007/second-springboot-web:1.0.0
+```

@@ -84,24 +84,25 @@ Day 11: done
 Eureka service Discovery load balancing: done
 • Lab with Service discovery  done
 
-Day 12: Micro service Inter Communication
-• Inter communication between micro service - with security and handshaking mechanism examples
-• Micro service Messaging
-• ActiveMQ Producers
-• ActiveMQ Consumers
-• Lab with message communication activemq
+Day 12: Micro service Inter Communication--done
+• Inter communication between micro service - with security and handshaking mechanism examples-done
+• Micro service Messaging--done
+• ActiveMQ Producers--done
+• ActiveMQ Consumers--done
+• Lab with message communication activemq--done
 
-Day 13: Micro service Testing:
-• Automated unit testing
-• Component test • Integration test
-• Spring Security (using jwt)
+Day 13: Micro service Testing:--done
+• Automated unit testing--done
+• Component test • Integration test--done
+• Spring Security (using jwt)--done
 
-Day 14 : Docker
-• Introduction to Docker
-• Architecture
-• Dockerhub and registry
-• Dockerfile • Docker compose
-• Images and containers
+Day 14 : Docker---done
+• Introduction to Docker--done
+• Architecture---done
+• Dockerhub and registry--
+• Dockerfile ---done
+• Docker compose
+• Images and containers---done
 
 Day 15: Deployment
  Deployments of microservices over cloud environments (AWS or Azure, any one)
