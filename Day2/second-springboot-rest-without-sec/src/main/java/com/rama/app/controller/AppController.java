@@ -49,12 +49,25 @@ public class AppController {
     }
 
 
+    @GetMapping("/get/header")
+    public ResponseEntity<String> senHeader(@RequestHeader HttpHeaders header) {
+
+      /*  if (isHeaderMissing(header, "name")) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }*/
+        HttpHeaders responseHeader = new HttpHeaders();
+        responseHeader.set("NameHeader",header.toString());
+
+        return ResponseEntity.ok()
+                .headers(responseHeader)
+                .body("send");
+    }
     @GetMapping("/header")
     public ResponseEntity<String> getRequestparam(@RequestHeader HttpHeaders header) {
 
-        if (isHeaderMissing(header, "name")) {
+      /*  if (isHeaderMissing(header, "name")) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
+        }*/
         HttpHeaders responseHeader = new HttpHeaders();
         responseHeader.setExpires(ZonedDateTime.now()
                 .plusDays(1));
