@@ -23,5 +23,5 @@ $ mvn spring-boot:run
 ### Test
 
 ```bash
-$ curl --location --request GET 'http://localhost:9091/getSchoolDetails/XYZ'
+$ curl --location --request GET 'http://localhost:9091/getSchoolDetails/School1'
 ```

@@ -21,20 +21,20 @@ public class StudentServiceController {
         schooDB = new HashMap<String, List<Student>>();
  
         List<Student> lst = new ArrayList<Student>();
-        Student std = new Student("Rama", "BE 1st year");
+        Student std = new Student("Student1", "Class1");
         lst.add(std);
-        std = new Student("Shanker", "BE 3rd year");
+        std = new Student("Student2", "Class2");
         lst.add(std);
  
-        schooDB.put("ABC", lst);
+        schooDB.put("School1", lst);
  
         lst = new ArrayList<Student>();
-        std = new Student("Ravi", "BE 3rd year");
+        std = new Student("Student3", "Class3");
         lst.add(std);
-        std = new Student("Ram", "BE 5th year");
+        std = new Student("Student4", "Class4");
         lst.add(std);
  
-        schooDB.put("XYZ", lst);
+        schooDB.put("school2", lst);
  
     }
  

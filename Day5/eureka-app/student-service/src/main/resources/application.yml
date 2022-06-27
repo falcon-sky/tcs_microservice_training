@@ -1,5 +1,5 @@
 server:
-  port: 9093    #default port where the service will be started
+  port: 9094    #default port where the service will be started
  
 eureka:         #tells about the Eureka server details and its refresh time
   instance:
@@ -16,10 +16,7 @@ eureka:         #tells about the Eureka server details and its refresh time
 spring:    
   application:
     name: student-service   #current service name to be used by the eureka server
-     
-management:
-  security:
-    enabled: false  #disable the spring security on the management endpoints like /env, /refresh etc.
+
  
 logging:
   level:
