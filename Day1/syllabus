@@ -2,7 +2,7 @@ Day 1 : done
 Introduction To microservice---done
 Java essential for micro service---done
 Build tools maven---done
-Docker basic introduction---
+Docker basic introduction---docker
 Tools for code – Intellij---done
 
 Day 2 : done
@@ -37,15 +37,15 @@ Lab on Docker containerization.
 
 Day 5 : done
  Spring Boot : Annotation-- done
- Dependency Injection--
-• Lab With Spring boot annotation and DI
+ Dependency Injection--done
+• Lab With Spring boot annotation and DI--done
 
 Day  6: done
- Spring Boot : properties
+ Spring Boot : properties--done
  Spring boot environment variable---done
  Deep dive to spring.io---done
  DI with Spring Boot--done
-• Lab With Spring boot annotation and environment
+• Lab With Spring boot annotation and environment--done
 
 Day 7 : done
 REST API:
@@ -53,7 +53,7 @@ REST API:
  • GET API • POST/PUT API
 Lab on GET POST and PUT
 
-Day 8:
+Day 8:done
 REST API:
  • DELETE API • Path Parameters ---done
  • Header Parameters----done
@@ -98,10 +98,10 @@ Day 13: Micro service Testing:--done
 
 Day 14 : Docker---done
 • Introduction to Docker--done
-• Architecture---done
-• Dockerhub and registry-- done
+• Architecture---
+• Dockerhub and registry--
 • Dockerfile ---done
-• Docker compose--done
+• Docker compose--
 • Images and containers---done
 
 Day 15: Deployment: Deploy on virtual machine
