@@ -25,7 +25,7 @@ public class ArtemisProducer {
                backoff = @Backoff(random = true, delayExpression = "${artemis.retry.delay}",
                                   maxDelayExpression = "${artemis.retry.maxdelay}", multiplierExpression = "${artemis.retry.multiplier}"))
     public void send(String msg) {
-        LOGGER.info("Sending Data:");
+        LOGGER.info("Sending Data from patient service to the queue:",destinationQueue);
         jmsTemplate.convertAndSend(destinationQueue, msg);
         LOGGER.info("Data Sent:");
     }
