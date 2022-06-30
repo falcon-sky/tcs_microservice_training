@@ -73,5 +73,6 @@ public class CalculatorIntegrationTest {
     String result = responseEntity.andReturn().getResponse().getContentAsString();
     assertEquals(String.valueOf(expected), result);
   }
+  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
 
 }
