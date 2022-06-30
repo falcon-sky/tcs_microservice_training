@@ -64,6 +64,12 @@ $ docker-compose  pull
 $ docker-compose  up
 ```
 
+## Looking docker image
+
+docker exec -it c555dfd07277 bash
+
 ## Testing
 
 http://localhost:8080/
+
+
