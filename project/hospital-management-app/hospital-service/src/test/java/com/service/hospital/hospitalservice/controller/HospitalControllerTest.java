@@ -1,7 +1,6 @@
 package com.service.hospital.hospitalservice.controller;
 
 import com.service.hospital.hospitalservice.producer.ArtemisProducer;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

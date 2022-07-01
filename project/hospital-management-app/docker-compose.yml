@@ -1,5 +1,23 @@
 version: '3.2'
 services:
+  hospital:
+    image: falcon007/hospital-service:0.0.1-SNAPSHOT
+    ports:
+      - "8081:8081"
+    depends_on:
+     - mysql
+     - artemis
+    networks:
+      - hospital-network
+  patient:
+    image: falcon007/patient-service:0.0.1-SNAPSHOT
+    ports:
+      - "8082:8082"
+    depends_on:
+      - mysql
+      - artemis
+    networks:
+      - hospital-network
   mysql:
     image: mysql:5.7
     restart: always
@@ -14,6 +32,8 @@ services:
     ports:
       # <Port exposed> : < MySQL Port running inside container>
       - '3306:3306'
+    networks:
+      - hospital-network
   artemis:
     image: vromero/activemq-artemis:latest
     ports:
@@ -24,3 +44,8 @@ services:
       ARTEMIS_PASSWORD: admin
       ARTEMIS_MIN_MEMORY: 512M
       ARTEMIS_MAX_MEMORY: 1024M
+    networks:
+      - hospital-network
+networks:
+  hospital-network:
+    driver: bridge
