@@ -4,16 +4,26 @@ services:
     image: falcon007/hospital-service:0.0.1-SNAPSHOT
     ports:
       - "8081:8081"
+    environment:
+      spring.datasource.url: "jdbc:mysql://mysql:3306/db"
     depends_on:
      - mysql
      - artemis
+    links:
+      - mysql
+      - artemis
     networks:
       - hospital-network
   patient:
     image: falcon007/patient-service:0.0.1-SNAPSHOT
+    environment:
+      - SPRING_DATASOURCE_URL= jdbc:mysql://mysql:3306/db
     ports:
       - "8082:8082"
     depends_on:
+      - mysql
+      - artemis
+    links:
       - mysql
       - artemis
     networks:
